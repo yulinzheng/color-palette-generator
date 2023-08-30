@@ -21,7 +21,7 @@ class DominantColors():
         # use k-means to cluster pixels
         clt = KMeans(n_clusters=self.CLUSTERS, n_init=10)
         clt.fit(pixels)
-        # save labels for calculating frequency count later
+        # save labels for calculating frequencies later
         self.LABELS = clt.labels_
         # dominant colors are cluster centers
         return clt.cluster_centers_
